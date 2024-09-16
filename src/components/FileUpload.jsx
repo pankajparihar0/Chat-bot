@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { CloudArrowUpIcon } from '@heroicons/react/24/outline'; // Updated import for Heroicons v2
 
-const FileUpload = () => {
+const FileUpload = ({handalupdating}) => {
   const [files, setFiles] = useState([]);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isUploading, setIsUploading] = useState(false);
@@ -11,6 +11,7 @@ const FileUpload = () => {
   const handleFileChange = (event) => {
     setFiles(Array.from(event.target.files));
     setUploadProgress(0);
+   // handalupdating(true);
   };
 
   // Handle drag and drop
@@ -22,6 +23,7 @@ const FileUpload = () => {
     event.preventDefault();
     setFiles(Array.from(event.dataTransfer.files));
     setUploadProgress(0);
+    //handalupdating(true);
   };
 
   // Handle file upload (mock upload process)
@@ -38,10 +40,12 @@ const FileUpload = () => {
       if (progress > 100) {
         progress = 100;
         clearInterval(interval);
+        handalupdating(true)
         setIsUploading(false);
       }
       setUploadProgress(progress);
     }, 500);
+    
   };
 
   return (
