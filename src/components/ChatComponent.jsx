@@ -22,7 +22,7 @@ const ChatComponent = () => {
   };
 
   return (
-    <div className="chat-container p-4 m-3">
+    <div className="chat-container  items-centre rounded-xl shadow-lg border border-gray-200">
       <div className="chat-box">
         {messages.map((msg, index) => (
           <div

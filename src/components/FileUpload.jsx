@@ -45,7 +45,7 @@ const FileUpload = () => {
   };
 
   return (
-    <div className="max-w-xl mt-10 p-8 bg-white rounded-xl shadow-lg border border-gray-200">
+    <div className="file-container flex flex-col justify-centre items-centre max-w-xl  p-8 bg-white rounded-xl shadow-lg border border-gray-200">
       {/* Drag and Drop Area */}
       <div
         className="relative flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-6 cursor-pointer hover:border-blue-500 transition-all duration-300"
