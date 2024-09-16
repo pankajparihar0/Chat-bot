@@ -48,7 +48,7 @@ const FileUpload = () => {
     <div className="file-container flex flex-col justify-centre items-centre max-w-xl  p-8 bg-white rounded-xl shadow-lg border border-gray-200">
       {/* Drag and Drop Area */}
       <div
-        className="relative flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-6 cursor-pointer hover:border-blue-500 transition-all duration-300"
+        className="file relative flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-6 cursor-pointer hover:border-blue-500 transition-all duration-300"
         onDragOver={handleDragOver}
         onDrop={handleDrop}
       >
@@ -59,8 +59,8 @@ const FileUpload = () => {
           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
         />
         <div className="text-center">
-          <CloudArrowUpIcon className="w-12 h-12 mx-auto text-blue-400 mb-2" />
-          <p className="text-gray-600">Drag & Drop files here or click to select</p>
+          <CloudArrowUpIcon className="w-12 h-12 mx-auto  mb-2" />
+          <p className="text-black-600">Drag & Drop files here or click to select</p>
         </div>
       </div>
 
@@ -88,8 +88,8 @@ const FileUpload = () => {
       <button
         onClick={handleUpload}
         disabled={isUploading}
-        className={`w-full mt-6 py-3 rounded-md text-white transition-all duration-300 ${
-          isUploading ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'
+        className={`upload w-full mt-6 py-3 rounded-md transition-all duration-300 ${
+          isUploading ? 'bg-gray-400 cursor-not-allowed' : 'hover:bg-blue-600'
         } focus:outline-none focus:ring-2 focus:ring-blue-300`}
       >
         {isUploading ? 'Uploading...' : 'Upload Files'}

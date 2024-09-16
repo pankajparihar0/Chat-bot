@@ -16,37 +16,55 @@
   
   .message {
     margin-bottom: 10px;
+    font-size: 1.3rem ;
   }
   
   .message.bot {
     text-align: left;
+    border-radius: 10px 10px 10px 0;
+    padding: 5px;
+    margin: 2px;
+    background: black;
+    color: white;
+    width: max-content;
   }
   
   .message.user {
-    text-align: right;
+    margin-left:auto !important;
+    border-radius: 10px 10px 0px 10px;
+    padding: 5px;
+    margin: 2px;
+    background:rgb(204, 204, 204);
+    color:black;
+    width: max-content;
   }
   
   .input-container {
     display: flex;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    background-color: #fff;
+    padding: 5px;
+   
   }
   
-  input {
+  .input-container input {
     flex: 1;
-    padding: 8px;
+    padding: 2px;
+    background:rgb(204, 204, 204);
     border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 10px;
+    height: 45px;
+
+
   }
   
-  button {
-    padding: 8px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007bff;
-    color: white;
+  .input-container button {
+    padding: 2px;
+    margin: 10px !important;
+    width : 50px;
+    aspect-ratio: 1/1;
+    border:solid black 1px;
+    border-radius: 50%;
+    background-color:rgb(204, 204, 204) !important ;
+    color: black;
     cursor: pointer;
   }
   

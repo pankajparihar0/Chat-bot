@@ -22,7 +22,7 @@ const ChatComponent = () => {
   };
 
   return (
-    <div className="chat-container  items-centre rounded-xl shadow-lg border border-gray-200">
+    <div className="chat-container flex flex-col  items-centre rounded-xl shadow-lg border border-gray-200">
       <div className="chat-box">
         {messages.map((msg, index) => (
           <div
@@ -35,13 +35,14 @@ const ChatComponent = () => {
       </div>
       <div className="input-container">
         <input
+        className='m-4'
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === 'Enter') handleSendMessage();
           }}
-          placeholder="Type a message..."
+          placeholder="Enter Your Query Here..."
         />
         <button onClick={handleSendMessage}>Send</button>
       </div>
